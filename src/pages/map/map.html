@@ -1,0 +1,27 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Map</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <div id="canv_map">
+    <div class="info" *ngIf="loading && !error">
+      Un momento por favor...<br />
+      GEOLOCALIZACIÓN EN CURSO
+    </div>
+    <div class="error" *ngIf="error">
+      <p>
+        ERROR Geolocalización<br />
+        No podemos establecer tu posición<br />
+      </p>
+      <p>
+        Por favor, revisa los permisos<br />
+        de la aplicación.
+      </p>
+    </div>
+  </div>
+</ion-content>
